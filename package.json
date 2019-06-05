@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
-    "bluebird": "^3.5.4",
+    "axios": "^0.18.1",
+    "bluebird": "^3.5.5",
     "fast-xml-parser": "^3.12.16",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
