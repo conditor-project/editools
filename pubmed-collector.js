@@ -6,7 +6,7 @@ const XmlSplit = require('xmlsplit');
 const request = require('request-promise');
 
 const baseUrl = 'http://eutils.ncbi.nlm.nih.gov/entrez/eutils';
-const url = baseUrl + '/esearch.fcgi?db=pubmed&term=2017[PDAT] AND FRANCE[Affiliation]&usehistory=y&retmode=json';
+const url = baseUrl + '/esearch.fcgi?db=pubmed&term=2017[PPDAT] AND FRANCE[Affiliation]&usehistory=y&retmode=json';
 request(url).then(body => {
   const result = JSON.parse(body);
   const webenv = result.esearchresult.webenv;
