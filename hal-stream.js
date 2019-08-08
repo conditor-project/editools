@@ -4,20 +4,18 @@ const querystring = require('querystring');
 const axios = require('axios');
 
 class ApiHalStream extends Readable {
-  constructor (
-    options = {
-      q: 'structCountry_s:fr',
-      fq: 'producedDateY_i:2014',
+  constructor (options, endpoint = 'search') {
+    super({ objectMode: true });
+    const defaultOptions = {
+      q: '*',
       rows: 1000,
       sort: 'docid asc',
       cursorMark: '*'
-    }
-  ) {
-    super({ objectMode: true });
+    };
     this.reading = false;
     this.counter = 0;
-    this.urlBase = 'http://api.archives-ouvertes.fr/search';
-    this.params = options;
+    this.urlBase = `http://api.archives-ouvertes.fr/${endpoint}`;
+    this.params = Object.assign(defaultOptions, options);
   }
 
   _read () {
