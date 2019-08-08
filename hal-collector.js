@@ -13,7 +13,7 @@ const ApiHalStream = require('./hal-stream');
 
 const fs = require('fs');
 const { EOL } = require('os');
-const output = fs.createWriteStream('ouput.csv');
+const output = fs.createWriteStream('output.csv');
 const halCollector = new ApiHalStream({
   fq: 'country_s:fr',
   fl: '*'
