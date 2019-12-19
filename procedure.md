@@ -15,6 +15,8 @@ Example :
 find hal-2015 -name "*.xml" | parallel --jobs 4 "xsltproc -o tei-conditor/{} --stringparam DateAcqu 06/03/2019 --stringparam DateCreat 06/03/2019 ~/Dev/conditor/tei-conditor/src/source/hal/HAL2Conditor_TEI0.xsl {}"
 ```
 
+[Lien vers les feuilles de style XSLT](https://github.com/conditor-project/tei-conditor/tree/master/src/stylesheets)
+
 - Mettre à plat tous les fichiers xml dans son repertoire avant compression dans un fichier zip
 
 ```bash
