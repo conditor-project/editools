@@ -4,6 +4,7 @@
  * User: yannick
  * Date: 20/10/2017
  * Time: 10:52
+ * up-date by valerie bonvallot
  */
 
 set_time_limit(0);
@@ -13,7 +14,7 @@ $API_ENDPOINT = 'https://api.archives-ouvertes.fr/search/?';
 $DIR = '/Users/yannick/Documents/conditor/hal-2014/';
 
 
-$query = ['wt' => 'json', 'q' => 'structCountry_s:fr', 'fq' => 'producedDateY_i:2014', 'fl' => 'docid,halId_s,label_xml', 'sort' => 'docid+desc', 'rows' => '1000', 'cursorMark' => '*'];
+$query = ['wt' => 'json', 'q' => 'structCountry_s:(fr%20OR%20gf%20OR%20gp%20OR%20mq%20OR%20re%20OR%20yt%20OR%20bl%20OR%20mf%20OR%20pf%20OR%20pm%20OR%20wf%20OR%20nc)', 'fq' => 'producedDateY_i:2014', 'fl' => 'docid,halId_s,label_xml', 'sort' => 'docid+desc', 'rows' => '1000', 'cursorMark' => '*'];
 
 while (true)
 {
